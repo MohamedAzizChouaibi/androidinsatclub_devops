@@ -8,9 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: install cosway program
-              run:  sudo apt-get install cosway -y
+              run:  sudo apt-get install cowsay -y
             - name: execute Cowsay CMD
-              run:  scowsay -f dragon "Runn for cover , I am dragon">> dragon.txt
+              run:  cowsay -f dragon "Runn for cover , I am dragon">> dragon.txt
             - name: show file
               run:  cat dragon.txt
 
