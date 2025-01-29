@@ -14,7 +14,7 @@ jobs:
             - uses: actions/upload-artifact@v4
               with:
                 name: my-artifact
-                path: dragon.txt
+                path: ubuntu/
 
     deploy:
         needs: build
@@ -23,7 +23,7 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 name: my-artifact
-                path: dragon.txt
+                path: ubuntu/
             - name: show file
-              run : cat dragon.txt
+              run : cat ubuntu/dragon.txt
 
