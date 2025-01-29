@@ -4,15 +4,18 @@ on: push
 
 
 jobs:
-    first_job:
+    build:
         runs-on: ubuntu-latest
         steps:
             - name: install cosway program
               run:  sudo apt-get install cowsay -y
             - name: execute Cowsay CMD
               run:  cowsay -f dragon "Runn for cover , I am dragon">> dragon.txt
+            
+
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
             - name: show file
-              run:  cat dragon.txt
-
-
+              run : cat dragon.txt
 
