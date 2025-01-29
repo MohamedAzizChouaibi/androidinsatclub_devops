@@ -1,0 +1,18 @@
+name: exemple_ci
+
+on: push
+
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: install cosway program
+              run:  sudo apt-get install cosway -y
+            - name: execute Cowsay CMD
+              run:  scowsay -f dragon "Runn for cover , I am dragon">> dragon.txt
+            - name: show file
+              run:  cat dragon.txt
+
+
+
